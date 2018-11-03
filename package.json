@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "test-watch": "node node_modules/.bin/jest --watch"
   },
   "jest": {
     "testEnviroment": "node"
@@ -22,6 +23,7 @@
   "dependencies": {
     "jest": "^23.6.0",
     "koa": "^2.6.1",
+    "koa-router": "^7.4.0",
     "supertest": "^3.3.0"
   }
 }

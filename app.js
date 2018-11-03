@@ -5,4 +5,4 @@ app.use(ctx =>{
     ctx.body = 'Hello Diana'
 });
 
-app.listen(3000);
+module.exports = app;
