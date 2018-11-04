@@ -1,29 +1,42 @@
 {
-  "name": "invoice-sys-api",
+  "name": "lemme-api",
   "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "test-watch": "node node_modules/.bin/jest --watch"
+    "test-watch": "node node_modules/.bin/jest --watch",
+    "dev": "nodemon -r dotenv/config server/index.js dotenv_config_path=config/secrets.env"
   },
   "jest": {
-    "testEnviroment": "node"
+    "testEnvironment": "node"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/JakubMrzyglod/InvoiceSys-api.git"
+    "url": "git+ssh://git@github.com/miksturait/lemme-api.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/JakubMrzyglod/InvoiceSys-api/issues"
+    "url": "https://github.com/miksturait/lemme-api/issues"
   },
-  "homepage": "https://github.com/JakubMrzyglod/InvoiceSys-api#readme",
+  "homepage": "https://github.com/miksturait/lemme-api#readme",
   "dependencies": {
-    "jest": "^23.6.0",
-    "koa": "^2.6.1",
+    "@koa/cors": "^2.2.2",
+    "dotenv": "^6.0.0",
+    "joi": "^13.6.0",
+    "jsonapi-serializer": "^3.5.6",
+    "koa": "^2.5.2",
+    "koa-bodyparser": "^4.2.1",
+    "koa-logger": "^3.2.0",
     "koa-router": "^7.4.0",
-    "supertest": "^3.3.0"
+    "lodash": "^4.17.11",
+    "mongoose": "^5.2.11",
+    "nodemon": "^1.18.4",
+    "socket.io": "^2.1.1"
+  },
+  "devDependencies": {
+    "jest": "^23.5.0",
+    "supertest": "^3.1.0"
   }
 }
