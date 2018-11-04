@@ -1,5 +1,5 @@
-const tableRouter = require('./router');
+const invoiceRouter = require('./router');
 
 module.exports =  {
-  routes: tableRouter.routes()
+  routes: invoiceRouter.routes()
 }
