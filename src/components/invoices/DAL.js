@@ -1,7 +1,6 @@
 const Invoice = require('./model');
 
-const update = async (id, ctx) => console.log(ctx)
-// Invoice.findByIdAndUpdate(id, ctx);
+const update = async (ctx) => await Invoice.findByIdAndUpdate(ctx.id, ctx);
 
 const findAll = async () => await Invoice.find({});
 

@@ -5,7 +5,6 @@ const {
   findAll,
   findOne,
   update,
-  printData,
 } = require('./actions');
 const { create: createValidator } = require('./validators');
 const {
@@ -35,7 +34,6 @@ router.post('/api/v1/invoices',
 );
 
 router.patch('/api/v1/invoices/:id',
-printData,
 bodyParser(),
 jsonApiParser,
 update,
