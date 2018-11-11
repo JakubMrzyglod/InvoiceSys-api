@@ -1,20 +1,19 @@
 const Invoice = require('./model');
 
-const findAll = async () => {
-  return await Invoice.find({});
-};
+const update = async (id, ctx) => console.log(ctx)
+// Invoice.findByIdAndUpdate(id, ctx);
 
-const findOne = async (id) => {
-  return await Invoice.find({"_id":id})
-}
+const findAll = async () => await Invoice.find({});
 
-const createInvoice = async (attributes) => {
-  return await Invoice.create(attributes);
-};
+const findOne = async (id) => await Invoice.findById(id);
+
+const createInvoice = async (attributes) => await Invoice.create(attributes);
+
 
 
 module.exports = {
   findAll,
   findOne,
   createInvoice,
+  update
 };

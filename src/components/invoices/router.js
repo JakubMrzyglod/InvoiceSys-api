@@ -4,6 +4,8 @@ const {
   create,
   findAll,
   findOne,
+  update,
+  printData,
 } = require('./actions');
 const { create: createValidator } = require('./validators');
 const {
@@ -15,12 +17,13 @@ const {
 const router = new Router();
 
 router.get('/api/v1/invoices',
-  findAll,
-  serialize
+findAll,
+serialize
 );
+
 router.get('/api/v1/invoices/:id',
-  findOne,
-  serialize
+findOne,
+serialize
 );
 
 router.post('/api/v1/invoices',
@@ -29,6 +32,14 @@ router.post('/api/v1/invoices',
   validate(createValidator),
   create,
   serialize
+);
+
+router.patch('/api/v1/invoices/:id',
+printData,
+bodyParser(),
+jsonApiParser,
+update,
+serialize
 );
 
 module.exports = router;
