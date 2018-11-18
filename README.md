@@ -1,6 +1,4 @@
-Lemme node API
-
-## 1. Setup
+Setup
 
 ```bash
 git clone git@github.com:miksturait/lemme-api.git
