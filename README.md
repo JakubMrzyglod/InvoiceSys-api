@@ -1,7 +1,8 @@
 Setup
 
 ```bash
-git clone git@github.com:miksturait/lemme-api.git
+git clone https://github.com/JakubMrzyglod/InvoiceSys-api.git
+cd InvoiceSys-api
 npm install
 cp config/secrets.example.env config/secrets.env
 
