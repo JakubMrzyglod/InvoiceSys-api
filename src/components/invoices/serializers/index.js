@@ -2,6 +2,10 @@ const JSONAPISerializer = require('jsonapi-serializer').Serializer;
 
 const invoicesSerializer = new JSONAPISerializer('invoices', {
   attributes: ['name', 'items'],
+  items: {
+    ref: '_id',
+    attributes: ['name','quantity']
+  },
 
   
   topLevelLinks: {

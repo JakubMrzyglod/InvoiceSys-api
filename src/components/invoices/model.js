@@ -7,8 +7,8 @@ const itemSchema = new mongoose.Schema({
 
 const invoiceSchema = new mongoose.Schema({
   name: String,
-  items: Array,
-  // items: [itemSchema]
+  // items: Array,
+  items: [itemSchema]
 });
 
 const Invoice = mongoose.model('Invoice', invoiceSchema);
